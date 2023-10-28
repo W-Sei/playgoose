@@ -50,7 +50,7 @@ def create_enemy():
     # enemy = pygame.Surface(enemy_size)
     enemy = pygame.transform.scale(pygame.image.load("enemy.png").convert_alpha(), enemy_size)
     # enemy.fill(COLOR_BLUE)
-    enemy_rect = pygame.Rect(WIDTH, random.randint(0, HEIGHT), *enemy_size)
+    enemy_rect = pygame.Rect(WIDTH, random.randint(15, HEIGHT-30), *enemy_size)
     enemy_move = [random.randint(-8, -4), 0]
     return [enemy, enemy_rect, enemy_move]
 
@@ -66,7 +66,7 @@ def create_bonus():
     # bonus = pygame.Surface(bonus_size)
     bonus = pygame.transform.scale(pygame.image.load("bonus.png").convert_alpha(), bonus_size)
     # bonus.fill(COLOR_RED)
-    bonus_rect = pygame.Rect(random.randint(0, WIDTH), 0, *bonus_size)
+    bonus_rect = pygame.Rect(random.randint(30, WIDTH-60), 0, *bonus_size)
     bonus_move = [0, random.randint(4, 8)]
     return [bonus, bonus_rect, bonus_move]
 
