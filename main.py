@@ -102,12 +102,13 @@ while playing:
         main_display.blit(bonus[0], bonus[1])
 
         if player_rect.colliderect(bonus[1]):
-            print("Nice")
+            # print("Nice")
+            bonuses.pop(bonuses.index(bonus))
 
     main_display.blit(player, player_rect)
 
     # print(len(enemies))
-    print(len(bonuses))
+    # print(len(bonuses))
 
     pygame.display.flip()
 
