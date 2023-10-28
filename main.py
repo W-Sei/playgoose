@@ -35,17 +35,17 @@ while playing:
     # print(player_rect.bottom)
 
 # option 1
-    if player_rect.bottom >= HEIGHT:
-        player_speed[1] = -player_speed[1]
+    # if player_rect.bottom >= HEIGHT:
+    #     player_speed[1] = -player_speed[1]
 
-    if player_rect.right >= WIDTH:
-        player_speed[0] = -player_speed[0]
+    # if player_rect.right >= WIDTH:
+    #     player_speed[0] = -player_speed[0]
 
-    if player_rect.top < 0:
-        player_speed[1] = -player_speed[1]
+    # if player_rect.top < 0:
+    #     player_speed[1] = -player_speed[1]
 
-    if player_rect.left < 0:
-        player_speed[0] = -player_speed[0]    
+    # if player_rect.left < 0:
+    #     player_speed[0] = -player_speed[0]    
 
 # option 2
     # if player_rect.bottom >= HEIGHT:
@@ -59,6 +59,19 @@ while playing:
 
     # if player_rect.left <= 0:
     #     player_speed = [1, 1]
+
+# option 3
+    # if player_rect.bottom >= HEIGHT:
+    #     player_speed = random.choice(([1, -1], [-1, -1]))
+
+    # if player_rect.top <= 0:
+    #     player_speed = random.choice(([-1, 1], [1, 1]))
+
+    # if player_rect.right >= WIDTH:
+    #     player_speed = random.choice(([-1, -1], [-1, 1])) 
+
+    # if player_rect.left <= 0:
+    #     player_speed = random.choice(([1, 1], [1, -1]))
 
     main_display.blit(player, player_rect)
 
