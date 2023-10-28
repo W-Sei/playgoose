@@ -83,6 +83,10 @@ while playing:
 
     pygame.display.flip()
 
+    for enemy in enemies:
+        if enemy[1].left < 0:
+            enemies.pop(enemies.index(enemy))
+
 
 
 
