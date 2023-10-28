@@ -10,6 +10,8 @@ FPS = pygame.time.Clock()
 HEIGHT = 800
 WIDTH = 1200
 
+FONT = pygame.font.SysFont('Verdana', 20)
+
 COLOR_YELLOWGREEN = (154, 205, 50)
 COLOR_BLACK = (0, 0, 0)
 COLOR_BLUE = (0, 0, 255)
@@ -57,6 +59,10 @@ pygame.time.set_timer(CREATE_BONUS, 2000)
 
 bonuses = []
 
+# score
+
+score = 0
+
 playing = True
 
 while playing:
@@ -93,7 +99,8 @@ while playing:
         main_display.blit(enemy[0], enemy[1])
 
         if player_rect.colliderect(enemy[1]):
-            print("Doom")
+            # print("Doom")
+            playing = False
 
     # bonuses movement
 
@@ -103,8 +110,10 @@ while playing:
 
         if player_rect.colliderect(bonus[1]):
             # print("Nice")
+            score += 1
             bonuses.pop(bonuses.index(bonus))
 
+    main_display.blit(FONT.render(str(score), True, COLOR_YELLOWGREEN), (WIDTH-50, 20))
     main_display.blit(player, player_rect)
 
     # print(len(enemies))
