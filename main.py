@@ -11,7 +11,7 @@ FPS = pygame.time.Clock()
 HEIGHT = 800
 WIDTH = 1200
 
-FONT = pygame.font.SysFont('Verdana', 20)
+FONT = pygame.font.SysFont('Verdana', 35)
 
 COLOR_YELLOWGREEN = (154, 205, 50)
 COLOR_BLACK = (0, 0, 0)
@@ -36,7 +36,7 @@ player_size = (90, 40)
 # player = pygame.Surface(player_size)
 player = pygame.transform.scale(pygame.image.load('player.png').convert_alpha(), player_size)
 # player.fill(COLOR_YELLOWGREEN)
-player_rect = pygame.Rect(100, (HEIGHT/2)-45, *player_size)
+player_rect = pygame.Rect(100, (HEIGHT/2)-155, *player_size)
 
 player_move_down = [0, 4]
 player_move_right = [4, 0]
@@ -46,7 +46,7 @@ player_move_left = [-4, 0]
 # enemies
 
 def create_enemy():
-    enemy_size = (180, 80)
+    enemy_size = (200, 80)
     # enemy = pygame.Surface(enemy_size)
     enemy = pygame.transform.scale(pygame.image.load("enemy.png").convert_alpha(), enemy_size)
     # enemy.fill(COLOR_BLUE)
@@ -62,7 +62,7 @@ enemies = []
 # bonuses
 
 def create_bonus():
-    bonus_size = (120, 180)
+    bonus_size = (130, 190)
     # bonus = pygame.Surface(bonus_size)
     bonus = pygame.transform.scale(pygame.image.load("bonus.png").convert_alpha(), bonus_size)
     # bonus.fill(COLOR_RED)
