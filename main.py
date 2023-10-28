@@ -53,7 +53,7 @@ def create_bonus():
     return [bonus, bonus_rect, bonus_move]
 
 CREATE_BONUS = CREATE_ENEMY + 1
-pygame.time.set_timer(CREATE_BONUS, 3000)
+pygame.time.set_timer(CREATE_BONUS, 2000)
 
 bonuses = []
 
